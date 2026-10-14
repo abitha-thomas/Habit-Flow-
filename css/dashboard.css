@@ -1,0 +1,120 @@
+body{
+    background:#eef8f2;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    padding:15px;
+}
+
+/* Welcome */
+#welcome{
+    color:#198754;
+    font-weight:bold;
+}
+
+#date{
+    color:gray;
+}
+
+/* Cards */
+.dashboard-card{
+    border:none;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-5px);
+}
+
+.dashboard-card h1{
+    color:#198754;
+    font-weight:bold;
+}
+
+/* Main Cards */
+.card{
+    border:none;
+    border-radius:15px;
+}
+
+/* Add Habit Button */
+.btn-success{
+    background:#198754;
+    border:none;
+}
+
+.btn-success:hover{
+    background:#157347;
+}
+
+/* Habit List */
+.list-group-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+    border-radius:10px;
+    padding:15px;
+}
+
+/* Completed Habit */
+.completed span{
+    text-decoration:line-through;
+    color:gray;
+}
+
+/* Buttons */
+.action-btn button{
+    margin-left:5px;
+}
+
+/* Progress */
+.progress{
+    height:25px;
+    border-radius:20px;
+}
+
+.progress-bar{
+    font-weight:bold;
+    font-size:15px;
+}
+
+/* Search */
+#searchHabit{
+    border-radius:10px;
+}
+
+/* Input */
+#habitInput{
+    border-radius:10px 0 0 10px;
+}
+
+.input-group .btn{
+    border-radius:0 10px 10px 0;
+}
+
+/* Profile Button */
+.btn-light{
+    font-weight:bold;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.dashboard-card{
+    margin-bottom:20px;
+}
+
+.list-group-item{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.action-btn{
+    margin-top:10px;
+}
+
+}

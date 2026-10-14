@@ -1,0 +1,146 @@
+.navbar {
+    padding: 55px 35px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 18px;
+    margin: 0 12px;
+}
+
+
+/* index-html */
+.intro h1 {
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.intro {
+    text-align: center;
+    padding: 150px;
+
+}
+
+.intro p {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.intro {
+    background-image: url(../images/habi.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+
+}
+
+.startbtn {
+    background-color: darkgreen;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+
+/* features */
+.feature-box {
+    background: #eaf8ee;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+    transition: 0.3s;
+    border: 1px solid #d7f0de;
+}
+
+.feature-box:hover {
+    background: #198754;
+    color: white;
+    transform: translateY(-8px);
+}
+
+.feature-box h3 {
+    font-size: 45px;
+}
+
+.feature-box h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.feature-box p {
+    line-height: 28px;
+}
+
+/* popular */
+.card-img-top{
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.card{
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+/* footer */
+footer{
+    margin-top: 40px;
+    background:#1f4d3d;
+    color:white;
+    padding:25px 0 10px;
+    text-align:center;
+}
+
+footer h3{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+footer p{
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:15px;
+}
+footer a:hover{
+    color: #90EE90;
+}
+
+footer hr{
+    margin:15px auto;
+    width:80%;
+}
+
+footer .copyright{
+    font-size:14px;
+    margin-bottom:0;
+}
+
+

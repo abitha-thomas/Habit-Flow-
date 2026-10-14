@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Flow | Register</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url("./images/habitbg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+        .box {
+            width: 450px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: darkgreen;
+            margin-bottom: 20px;
+        }
+
+        .btn-success {
+            width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="box">
+
+        <h2>🌿 Habit Flow</h2>
+
+        <div class="mb-3">
+            <label> Name</label>
+            <input type="text" id="name" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" id="email" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Password</label>
+            <input type="password" id="password" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Confirm Password</label>
+            <input type="password" id="confirmPassword" class="form-control">
+        </div>
+
+        <button class="btn btn-success" onclick="register()">
+            Register
+        </button>
+
+        <p class="text-center mt-3">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+    <script>
+
+        function register() {
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+            if (name == "" || email == "" || password == "" || confirmPassword == "") {
+                alert("Please fill all fields");
+                return;
+            }
+
+            if (name.length < 3) {
+                alert("Name must contain at least 3 characters");
+                return;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return;
+            }
+
+            if (password != confirmPassword) {
+                alert("Passwords do not match");
+                return;
+            }
+
+            let users = JSON.parse(localStorage.getItem("users")) || [];
+            let userExists = users.find(user => user.email === email);
+
+            if (userExists) {
+                alert("Email already registered");
+                return;
+            }
+            users.push({
+                name: name,
+                email: email,
+                password: password
+            });
+            localStorage.setItem("users", JSON.stringify(users));
+            alert("Registration Successful");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>
